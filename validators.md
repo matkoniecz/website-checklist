@@ -1,0 +1,54 @@
+Useful HTML validators
+
+What counts here: how many useful errors are reported, how many false positives are reported, how much time is needed to use this tools.
+
+# Grammarly
+
+Checker of grammar and language. Not very smart but catches some obvious problems (and many false positives). I consider it worth using to avoid wasting time and attention of a human proofreader on obvious. Accepts markdown and raw html as input. Requires registration to work properly, strongly pushes a paid version.
+
+Not a HTML-focused tool (it checks any text) and still turned out to be the most useful one so far.
+
+# Mobile-Friendly Test by Google
+
+https://search.google.com/test/mobile-friendly Especially important as hopefully what is reported here is similar to factors considered by Google for [ranking mobile-friendly websites higher](https://webmasters.googleblog.com/2016/03/continuing-to-make-web-more-mobile.html).
+
+# webpagetest.org
+
+[http://www.webpagetest.org](http://www.webpagetest.org) tests page speed
+
+# html5validator by svenkreiss
+
+https://github.com/svenkreiss/html5validator - so far it reported no user-visible problems, but installation (`pip install html5validator`) and running (`html5validator --show-warnings --root folder_to_validate`) is easy so it may be worth using.
+
+# Nu Html Checker
+https://github.com/validator/validator via java .jar file - relatively easy to install (`npm install --save vnu-jar`, move .jar file to known location) and use, reported some minor but user-visible problems (pages with text and without any <h1> tags) that helped to improve the site.
+
+I use it as follows (command executed in main folder of .html and .css files):
+
+find . -name "*.html" -exec java -jar /path_to_vnu_jar/vnu.jar --also-check-css --also-check-svg --verbose {} \;
+find . -name "*.css" -exec java -jar /path_to_vnu_jar/vnu.jar --also-check-css --also-check-svg --verbose {} \;
+
+# HTMLProofer
+
+https://github.com/gjtorikian/html-proofer
+
+I use it like this `/usr/local/bin/htmlproofer . --check-html --check-favicon --log-level warn`, from root folder of a project.
+
+# Rawler
+https://github.com/oscardelben/rawler
+
+Appears to be able to check only live websites.
+
+`/usr/local/bin/rawler https://mapsaregreat.com | /bin/grep -v "]  INFO -- : 200 - "`
+
+# Stylelint
+
+https://github.com/stylelint/stylelint/blob/master/docs/user-guide/cli.md
+
+Looks potentially useful, not worth configuring effort for me at this moment.
+
+# W3C CSS Validation
+
+https://github.com/w3c/css-validator + http://jigsaw.w3.org/css-validator/
+
+Not investigated for now, but looks like something useful.

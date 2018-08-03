@@ -2,15 +2,17 @@ Useful HTML validators
 
 What counts here: how many useful errors are reported, how many false positives are reported, how much time is needed to use this tools.
 
+# Mobile-Friendly Test by Google
+
+https://search.google.com/test/mobile-friendly Especially important as hopefully what is reported here is similar to factors considered by Google for [ranking mobile-friendly websites higher](https://webmasters.googleblog.com/2016/03/continuing-to-make-web-more-mobile.html).
+
+Following suggestions (like using viewport) may save time on what would be otherwise wasted on unneded debugging.
+
 # Grammarly
 
 Checker of grammar and language. Not very smart but catches some obvious problems (and many false positives). I consider it worth using to avoid wasting time and attention of a human proofreader on obvious. Accepts markdown and raw html as input. Requires registration to work properly, strongly pushes a paid version.
 
 Not a HTML-focused tool (it checks any text) and still turned out to be the most useful one so far.
-
-# Mobile-Friendly Test by Google
-
-https://search.google.com/test/mobile-friendly Especially important as hopefully what is reported here is similar to factors considered by Google for [ranking mobile-friendly websites higher](https://webmasters.googleblog.com/2016/03/continuing-to-make-web-more-mobile.html).
 
 # webpagetest.org
 

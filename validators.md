@@ -4,7 +4,7 @@ What counts here: how many useful errors are reported, how many false positives 
 
 # Mobile-Friendly Test by Google
 
-https://search.google.com/test/mobile-friendly Especially important as hopefully what is reported here is similar to factors considered by Google for [ranking mobile-friendly websites higher](https://webmasters.googleblog.com/2016/03/continuing-to-make-web-more-mobile.html).
+[Test made by Google](https://search.google.com/test/mobile-friendly). Especially important as hopefully what is reported here is similar to factors considered by Google for [ranking mobile-friendly websites higher](https://webmasters.googleblog.com/2016/03/continuing-to-make-web-more-mobile.html).
 
 Following suggestions (like using viewport) may save time on what would be otherwise wasted on unneded debugging.
 
@@ -16,14 +16,14 @@ Not a HTML-focused tool (it checks any text) and still turned out to be the most
 
 # webpagetest.org
 
-[http://www.webpagetest.org](http://www.webpagetest.org) tests page speed
+[Page speed test](http://www.webpagetest.org).
 
 # html5validator by svenkreiss
 
-https://github.com/svenkreiss/html5validator - so far it reported no user-visible problems, but installation (`pip install html5validator`) and running (`html5validator --show-warnings --root folder_to_validate`) is easy so it may be worth using.
+[Scriptability-friendly validator](https://github.com/svenkreiss/html5validator). So far it reported no user-visible problems, but installation (`pip install html5validator`) and running (`html5validator --show-warnings --root folder_to_validate`) is easy so it may be worth using.
 
 # Nu Html Checker
-https://github.com/validator/validator via java .jar file - relatively easy to install (`npm install --save vnu-jar`, move .jar file to known location) and use, reported some minor but user-visible problems (pages with text and without any <h1> tags) that helped to improve the site.
+https://github.com/validator/validator via java .jar file - relatively easy to install (`npm install --save vnu-jar`, move .jar file to known location) and use, reported some minor but user-visible problems (pages with text and without any &lt;h1&gt; tags) that helped to improve the site.
 
 I use it as follows (command executed in main folder of .html and .css files):
 

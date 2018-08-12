@@ -14,6 +14,12 @@ Checker of grammar and language. Not very smart but catches some obvious problem
 
 Not a HTML-focused tool (it checks any text) and still turned out to be the most useful one so far.
 
+I use [simple script](https://github.com/matkoniecz/mapsaregreat.com/blob/master/code%20and%20content%20not%20served%20directly/html_to_text.py) to check all text at once.
+
+# manually check version of dependencies
+
+For example remember to update your leaflet .js and .css files. (is there a way to automate that?)
+
 # webpagetest.org
 
 [Page speed test](http://www.webpagetest.org).

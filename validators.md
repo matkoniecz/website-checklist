@@ -16,9 +16,21 @@ Not a HTML-focused tool (it checks any text), with plenty of problems and still 
 
 I use [simple script](https://github.com/matkoniecz/mapsaregreat.com/blob/master/code%20and%20content%20not%20served%20directly/html_to_text.py) to check all text at once.
 
+# PageSpeed Insights
+
+[Next useful Google tool](https://developers.google.com/speed/pagespeed/insights/).
+
+
 # manually check version of dependencies
 
 For example remember to update your leaflet .js and .css files. (is there a way to automate that?)
+
+# html-proofer
+
+[html-proofer by gjtorikian](https://github.com/gjtorikian/html-proofer)
+
+`htmlproofer folder_to_validate --check-html --check-favicon` is the only automatic validator that I found so far that reminds about favicons.
+
 
 # webpagetest.org
 

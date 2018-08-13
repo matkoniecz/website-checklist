@@ -6,13 +6,13 @@ What counts here: how many useful errors are reported, how many false positives 
 
 [Test made by Google](https://search.google.com/test/mobile-friendly). Especially important as hopefully what is reported here is similar to factors considered by Google for [ranking mobile-friendly websites higher](https://webmasters.googleblog.com/2016/03/continuing-to-make-web-more-mobile.html).
 
-Following suggestions (like using viewport) may save time on what would be otherwise wasted on unneded debugging.
+Following suggestions (like using viewport) from it may save time on what would be otherwise wasted on unneded debugging.
 
 # Grammarly
 
-Checker of grammar and language. Not very smart but catches some obvious problems (and many false positives). I consider it worth using to avoid wasting time and attention of a human proofreader on obvious. Accepts markdown and raw html as input. Requires registration to work properly, strongly pushes a paid version.
+Checker of grammar and language. Not very smart and has plenty of false positives but sometimes catches real problems. I consider it worth using to avoid wasting time and attention of a human proofreader on obvious things. Accepts markdown and raw html as input. Requires registration to work properly, strongly pushes a paid version.
 
-Not a HTML-focused tool (it checks any text) and still turned out to be the most useful one so far.
+Not a HTML-focused tool (it checks any text), with plenty of problems and still turned out to be the more useful than most automatic validators.
 
 I use [simple script](https://github.com/matkoniecz/mapsaregreat.com/blob/master/code%20and%20content%20not%20served%20directly/html_to_text.py) to check all text at once.
 

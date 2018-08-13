@@ -10,7 +10,7 @@ Due to recommendations of http://www.registrarowl.com/ and https://fitsmallbusin
 
 So far I encountered no hidden fees and other problems.
 
-Before paying it is worth googling for coupon codes - it was easy to find one with 1$ price reduction.
+Before paying it may be worth googling for coupon codes - it was easy to find one with 1$ price reduction.
 
 # Google
 

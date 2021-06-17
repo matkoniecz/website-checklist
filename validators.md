@@ -31,6 +31,9 @@ For example remember to update your leaflet .js and .css files. (is there a way 
 
 `htmlproofer folder_to_validate --check-html --check-favicon` is the only automatic validator that I found so far that reminds about favicons.
 
+Link check fails when `example` is linked instead of `example.html` while it works at Github Pages.
+
+On the other hand it found some actual dead links...
 
 # webpagetest.org
 

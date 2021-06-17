@@ -6,7 +6,7 @@ Check whatever your site is human-compatible, at least ask your family/friends t
 
 Check site from view point of someone that opened given page, spends 3 seconds on it and may stay longer.
 
-For example on page with long text and image do not expect that users will reat the text. It is likely that they will look at hopefully interesting image and become confused because image and explanation is disjointed.
+For example on page with long text and image do not expect that users will read the text. It is likely that they will look at hopefully interesting image and become confused because image and explanation is disjointed.
 
 It may be especially disappointing if image is not really image but something interactive (for example a slippy map) and user completely missed that.
 

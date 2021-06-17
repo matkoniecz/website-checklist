@@ -20,11 +20,11 @@ https://domains.google.com/ looks nice but prices are noticeably higher.
 
 unclear price, deceptive company
 
-https://www.hover.com/ is an excellent case of lying and deceptive company. Advertised price is 12.99$ (0.99 manipulation gets pass due to popularity of this scheme). On checkout first hidden fee appeared - tiny, but enough to try other service. It is quite sad because unlike GoDaddy site looked promising.
+https://www.hover.com/ is an excellent case of lying and deceptive company. Advertised price is 12.99$ (.99 manipulation gets pass due to popularity of this scheme). On checkout first hidden fee appeared - tiny, but enough to try other service. It is quite sad because unlike GoDaddy site looked promising.
 
 # GoDaddy
 
-unclear price, horrible website, extreme upselling
+Unclear price, horrible website, extreme upselling.
 
 Real price 50 times higher than advertised one. In this case method to hide it was to show 1 year cheaper, subsequent are extremely expensive. I noticed mention of minimum 2 year contract before running away. Though given how site looked and what I heard about this company I was not really surprised. https://godaddy.com/
 

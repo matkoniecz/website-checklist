@@ -12,9 +12,9 @@ So far I encountered no hidden fees and other problems.
 
 # Google
 
-should be fairly stable but I am not fan of supporting Google monopoly
+should be fairly stable but I am not fan of supporting Google monopoly. Also, with Google there is always a tiny chance of random ban without recourse. As I already have my email there I would prefer to reduce chance of doing anything that may trigger ban. And to reduce potential damage.
 
-https://domains.google.com/ looks nice but prices are noticeably higher, and I am trying to avoid doing everything with Google services.
+https://domains.google.com/ looks nice but prices are noticeably higher.
 
 # Hover
 

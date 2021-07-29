@@ -1,0 +1,3 @@
+https://www.namesilo.com/CustomDomain/Github
+
+https://stackoverflow.com/questions/23375422/how-do-i-set-up-github-pages-to-redirect-dns-requests-from-a-subdomain-e-g-www

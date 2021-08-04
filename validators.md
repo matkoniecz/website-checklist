@@ -2,6 +2,11 @@ Useful HTML validators
 
 What counts here: how many useful errors are reported, how many false positives are reported, how much time is needed to use this tools.
 
+# Detecting dead links
+
+* [https://github.com/LukasHechenberger/broken-link-checker-local](https://github.com/LukasHechenberger/broken-link-checker-local)
+* [https://validator.w3.org/checklink](https://validator.w3.org/checklink)
+* [askubuntu.com question](https://askubuntu.com/questions/1355874/any-cli-html-validator-running-locally-and-detecting-dead-internal-links)
 # Mobile-Friendly Test by Google
 
 [Test made by Google](https://search.google.com/test/mobile-friendly). Especially important as hopefully what is reported here is similar to factors considered by Google for [ranking mobile-friendly websites higher](https://webmasters.googleblog.com/2016/03/continuing-to-make-web-more-mobile.html).
@@ -44,12 +49,16 @@ On the other hand it found some actual dead links...
 [Scriptability-friendly validator](https://github.com/svenkreiss/html5validator). So far it reported no user-visible problems, but installation (`pip install html5validator`) and running (`html5validator --show-warnings --root folder_to_validate`) is easy so it may be worth using.
 
 # Nu Html Checker
-https://github.com/validator/validator via java .jar file - relatively easy to install (`npm install --save vnu-jar`, move .jar file to known location) and use, reported some minor but user-visible problems (pages with text and without any &lt;h1&gt; tags) that helped to improve the site.
+[https://github.com/validator/validator](https://github.com/validator/validator) via java .jar file - relatively easy to install (`npm install --save vnu-jar`, move .jar file to known location) and use, reported some minor but user-visible problems (pages with text and without any &lt;h1&gt; tags) that helped to improve the site.
 
 I use it as follows (command executed in main folder of .html and .css files):
 
 find . -name "*.html" -exec java -jar /path_to_vnu_jar/vnu.jar --also-check-css --also-check-svg --verbose {} \;
 find . -name "*.css" -exec java -jar /path_to_vnu_jar/vnu.jar --also-check-css --also-check-svg --verbose {} \;
+
+
+
+Runs online on [https://validator.w3.org/nu/](https://validator.w3.org/nu/)
 
 # HTMLProofer
 

@@ -10,6 +10,7 @@ What counts here: how many useful errors are reported, how many false positives 
        * Note that unlinked orphaned pages [will not be checked!](https://github.com/LukasHechenberger/broken-link-checker-local/issues/49)
        * UTF-8 [also has some issues](https://github.com/LukasHechenberger/broken-link-checker-local/issues/50) - an upstream [issue](https://github.com/stevenvachon/broken-link-checker/issues/234)
 * this [site-graph tool](https://github.com/tomlinsonk/site-graph) is promising as a base
+       * remember to use `--visit-external` - it is disabled by default!
 * [https://validator.w3.org/checklink](https://validator.w3.org/checklink)
 * [askubuntu.com question](https://askubuntu.com/questions/1355874/any-cli-html-validator-running-locally-and-detecting-dead-internal-links)
 # Mobile-Friendly Test by Google

@@ -9,6 +9,7 @@ What counts here: how many useful errors are reported, how many false positives 
        * `blcl -ro . --filter-level 3 | grep 'BROKEN'`
        * Note that unlinked orphaned pages [will not be checked!](https://github.com/LukasHechenberger/broken-link-checker-local/issues/49)
        * UTF-8 [also has some issues](https://github.com/LukasHechenberger/broken-link-checker-local/issues/50) - an upstream [issue](https://github.com/stevenvachon/broken-link-checker/issues/234)
+       * also, it is known to [hang randomly](https://github.com/stevenvachon/broken-link-checker/issues/90) (reported in 2017)
 * this [site-graph tool](https://github.com/tomlinsonk/site-graph) is promising as a base
        * remember to use `--visit-external` - it is disabled by default!
 * [https://validator.w3.org/checklink](https://validator.w3.org/checklink)

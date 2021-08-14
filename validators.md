@@ -3,17 +3,42 @@ Useful HTML validators
 What counts here: how many useful errors are reported, how many false positives are reported, how much time is needed to use this tools.
 
 # Detecting dead links
+I wnat to find all broken links on my website. I also would want to check and detect orphaned pages (pages not reachable from my main page by following links).
 
+Note that unlinked orphaned pages will not be checked by this tools, unless noted explicitly.
+
+I want a script that
+
+* runs locally
+* can validate locally present files - not only online websites (I want to check dead links before publishin)
+* but also can validate published websites
+* works without hangups/crashes/not supporting UTF8
+* can be used to detect orphaned pages
+* detects dead link in `<a href=`, `<img src=`, linked css/html files and more
+* can be used as is or is easily modifiable by me
+
+## Found candidates
+
+* this [site-graph tool](https://github.com/tomlinsonk/site-graph) is promising as a base, I am contributing to it
+       * remember to use `--visit-external` - it is disabled by default!
+* [linkchecker](https://github.com/linkchecker/linkchecker) works very nicely
+       * `linkchecker https://matkoniecz.github.io/dead_links_testing_site/`
+       * outputting site graph is one of listed features! So detecting orphaned pages should be feasible...
+       * `linkchecker https://matkoniecz.github.io/dead_links_testing_site/ --verbose -o csv` seems parsable to detect orphaned pages
+       * [has problems with utf-8 support](https://github.com/linkchecker/linkchecker/issues/554)
+* [https://validator.w3.org/checklink](https://validator.w3.org/checklink)
+* [askubuntu.com question](https://askubuntu.com/questions/1355874/any-cli-html-validator-running-locally-and-detecting-dead-internal-links)
+* [another option](https://superuser.com/a/139468/376651) is wget and parsing its log. Mentioning for completness but it looks like a nasty quagmire for me.
+       * `wget --spider  -o wget.log  -e robots=off --wait 1 -r -p https://matkoniecz.github.io/dead_links_testing_site/`
+       * `cat wget.log | grep 404`
 * [https://github.com/LukasHechenberger/broken-link-checker-local](https://github.com/LukasHechenberger/broken-link-checker-local)
        * `blcl -ro . --filter-level 3`
        * `blcl -ro . --filter-level 3 | grep 'BROKEN'`
-       * Note that unlinked orphaned pages [will not be checked!](https://github.com/LukasHechenberger/broken-link-checker-local/issues/49)
-       * UTF-8 [also has some issues](https://github.com/LukasHechenberger/broken-link-checker-local/issues/50) - an upstream [issue](https://github.com/stevenvachon/broken-link-checker/issues/234)
+       * UTF-8 [support has some issues](https://github.com/LukasHechenberger/broken-link-checker-local/issues/50) - see an upstream [issue](https://github.com/stevenvachon/broken-link-checker/issues/234)
        * also, it is known to [hang randomly](https://github.com/stevenvachon/broken-link-checker/issues/90) (reported in 2017)
-* this [site-graph tool](https://github.com/tomlinsonk/site-graph) is promising as a base
-       * remember to use `--visit-external` - it is disabled by default!
-* [https://validator.w3.org/checklink](https://validator.w3.org/checklink)
-* [askubuntu.com question](https://askubuntu.com/questions/1355874/any-cli-html-validator-running-locally-and-detecting-dead-internal-links)
+* [html-proofer by gjtorikian](https://github.com/gjtorikian/html-proofer)
+       * Link check fails when `example` is linked instead of `example.html` while it works at Github Pages.
+
 # Mobile-Friendly Test by Google
 
 [Test made by Google](https://search.google.com/test/mobile-friendly). Especially important as hopefully what is reported here is similar to factors considered by Google for [ranking mobile-friendly websites higher](https://webmasters.googleblog.com/2016/03/continuing-to-make-web-more-mobile.html).

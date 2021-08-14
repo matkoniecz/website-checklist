@@ -17,6 +17,8 @@ I want a script that
 * detects dead link in `<a href=`, `<img src=`, linked css/html files and more
 * can be used as is or is easily modifiable by me
 
+I made a [project full of test cases for easy testing of potential tools](https://github.com/matkoniecz/dead_links_testing_site).
+
 ## Found candidates
 
 * this [site-graph tool](https://github.com/tomlinsonk/site-graph) is promising as a base, I am contributing to it

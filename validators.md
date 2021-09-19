@@ -34,11 +34,9 @@ One of solutions is below. Not entirely happy about it but it works:
 ## Found candidates
 
 * [html-proofer by gjtorikian](https://github.com/gjtorikian/html-proofer)
-    * Link check fails when `example` is linked instead of `example.html` while it works at Github Pages.
-        * Very recently [reported](https://github.com/gjtorikian/html-proofer/issues/654) - maybe this problem is avoidable
-        * Submitted a [probing PR](https://github.com/gjtorikian/html-proofer/pull/653) to check is project alive
-        * How to perform recursive checking of links? Is it posssible to detect orphaned pages? (for research iff problem listed above is resolved)
-        * Is it supporting UTF8 properly ( https://github.com/matkoniecz/dead_links_testing_site in recursive mode should catch the problem )
+    * Link check fails when `example` is linked instead of `example.html` while it works at Github Pages. Requires an extra parameter to stop requiring explicit `.html`
+        * `htmlproofer /home/path_to_entire_folder/ --assume-extension --check-html --check-favicon --log-level warn`
+        * `htmlproofer /home/mateusz/Desktop/kolejka/portfolio/test_cases_for_detecting_link_rot/ --assume-extension --check-html --check-favicon --log-level warn`
 * this [site-graph tool](https://github.com/tomlinsonk/site-graph) is promising as a base, I am contributing to it
     * remember to use `--visit-external` - it is disabled by default!
 ### Problematic

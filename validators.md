@@ -33,8 +33,6 @@ One of solutions is below. Not entirely happy about it but it works:
 
 ## Found candidates
 
-* [w3c link checker](https://github.com/w3c/link-checker#w3c-linkchecker)
-    * investigate local version with html files served at localhost
 * [html-proofer by gjtorikian](https://github.com/gjtorikian/html-proofer)
     * Link check fails when `example` is linked instead of `example.html` while it works at Github Pages.
         * Not yet reported as an error it seeems! Report it, then move to problematic section.
@@ -54,6 +52,9 @@ One of solutions is below. Not entirely happy about it but it works:
     * `blcl -ro . --filter-level 3 | grep 'BROKEN'`
     * UTF-8 [support has some issues](https://github.com/LukasHechenberger/broken-link-checker-local/issues/50) - see an upstream [issue](https://github.com/stevenvachon/broken-link-checker/issues/234)
     * also, it is known to [hang randomly](https://github.com/stevenvachon/broken-link-checker/issues/90) (reported in 2017, remains unfixed)
+* [w3c link checker](https://github.com/w3c/link-checker#w3c-linkchecker) is promising
+    * but installation instructions [are broken](https://github.com/w3c/link-checker/issues/54)
+
 # Mobile-Friendly Test by Google
 
 [Test made by Google](https://search.google.com/test/mobile-friendly). Especially important as hopefully what is reported here is similar to factors considered by Google for [ranking mobile-friendly websites higher](https://webmasters.googleblog.com/2016/03/continuing-to-make-web-more-mobile.html).

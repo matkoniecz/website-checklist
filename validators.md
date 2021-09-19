@@ -35,7 +35,10 @@ One of solutions is below. Not entirely happy about it but it works:
 
 * [html-proofer by gjtorikian](https://github.com/gjtorikian/html-proofer)
     * Link check fails when `example` is linked instead of `example.html` while it works at Github Pages.
-        * Not yet reported as an error it seeems! Report it, then move to problematic section.
+        * Very recently [reported](https://github.com/gjtorikian/html-proofer/issues/654) - maybe this problem is avoidable
+        * Submitted a [probing PR](https://github.com/gjtorikian/html-proofer/pull/653) to check is project alive
+        * How to perform recursive checking of links? Is it posssible to detect orphaned pages? (for research iff problem listed above is resolved)
+        * Is it supporting UTF8 properly ( https://github.com/matkoniecz/dead_links_testing_site in recursive mode should catch the problem )
 * this [site-graph tool](https://github.com/tomlinsonk/site-graph) is promising as a base, I am contributing to it
     * remember to use `--visit-external` - it is disabled by default!
 ### Problematic

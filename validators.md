@@ -29,7 +29,6 @@ I made a [project full of test cases for easy testing of potential tools](https:
     * `linkchecker https://matkoniecz.github.io/dead_links_testing_site/ --verbose -o csv` seems parsable to detect orphaned pages
     * [has problems with utf-8 support](https://github.com/linkchecker/linkchecker/issues/554)
 * [https://validator.w3.org/checklink](https://validator.w3.org/checklink)
-* [askubuntu.com question](https://askubuntu.com/questions/1355874/any-cli-html-validator-running-locally-and-detecting-dead-internal-links)
 * [another option](https://superuser.com/a/139468/376651) is wget and parsing its log. Mentioning for completeness but it looks like a nasty quagmire for me.
     * `wget --spider  -o wget.log  -e robots=off --wait 1 -r -p https://matkoniecz.github.io/dead_links_testing_site/`
     * `cat wget.log | grep 404`

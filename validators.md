@@ -10,7 +10,7 @@ Note that unlinked orphaned pages will not be checked by this tools, unless note
 I want a script that
 
 * runs locally
-* can validate locally present files - not only online websites (I want to check dead links before publishin)
+* can validate locally present files - not only online websites (I want to check dead links before publishing)
 * but also can validate published websites
 * works without hangups/crashes/not supporting UTF8
 * can be used to detect orphaned pages

@@ -19,6 +19,18 @@ I want a script that
 
 I made a [project full of test cases for easy testing of potential tools](https://github.com/matkoniecz/dead_links_testing_site).
 
+## Checking local html files
+
+Note that local html files can be served on localhost in a relatively simple way, then any link checker running on your computer can check them. Without any extra support for reading files.
+
+One of solutions is below. Not entirely happy about it but it works:
+
+`sudo npm install http-server -g` BTW, is there way to install node modules without sudo and have it within PATH?
+
+`http-server` in directory with html files
+
+`p site_graph.py http://127.0.0.1:8080/ --visit-external --force`
+
 ## Found candidates
 
 * this [site-graph tool](https://github.com/tomlinsonk/site-graph) is promising as a base, I am contributing to it

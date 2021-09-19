@@ -33,14 +33,19 @@ One of solutions is below. Not entirely happy about it but it works:
 
 ## Found candidates
 
+* [w3c link checker](https://github.com/w3c/link-checker#w3c-linkchecker)
+    * investigate local version with html files served at localhost
+* [html-proofer by gjtorikian](https://github.com/gjtorikian/html-proofer)
+    * Link check fails when `example` is linked instead of `example.html` while it works at Github Pages.
+        * Not yet reported as an error it seeems! Report it, then move to problematic section.
 * this [site-graph tool](https://github.com/tomlinsonk/site-graph) is promising as a base, I am contributing to it
     * remember to use `--visit-external` - it is disabled by default!
+### Problematic
 * [linkchecker](https://github.com/linkchecker/linkchecker) works very nicely
     * `linkchecker https://matkoniecz.github.io/dead_links_testing_site/`
     * outputting site graph is one of listed features! So detecting orphaned pages should be feasible...
     * `linkchecker https://matkoniecz.github.io/dead_links_testing_site/ --verbose -o csv` seems parsable to detect orphaned pages
-    * [has problems with utf-8 support](https://github.com/linkchecker/linkchecker/issues/554)
-* [https://validator.w3.org/checklink](https://validator.w3.org/checklink)
+    * but [has problems with utf-8 support](https://github.com/linkchecker/linkchecker/issues/554)
 * [another option](https://superuser.com/a/139468/376651) is wget and parsing its log. Mentioning for completeness but it looks like a nasty quagmire for me.
     * `wget --spider  -o wget.log  -e robots=off --wait 1 -r -p https://matkoniecz.github.io/dead_links_testing_site/`
     * `cat wget.log | grep 404`
@@ -48,10 +53,7 @@ One of solutions is below. Not entirely happy about it but it works:
     * `blcl -ro . --filter-level 3`
     * `blcl -ro . --filter-level 3 | grep 'BROKEN'`
     * UTF-8 [support has some issues](https://github.com/LukasHechenberger/broken-link-checker-local/issues/50) - see an upstream [issue](https://github.com/stevenvachon/broken-link-checker/issues/234)
-    * also, it is known to [hang randomly](https://github.com/stevenvachon/broken-link-checker/issues/90) (reported in 2017)
-* [html-proofer by gjtorikian](https://github.com/gjtorikian/html-proofer)
-    * Link check fails when `example` is linked instead of `example.html` while it works at Github Pages.
-
+    * also, it is known to [hang randomly](https://github.com/stevenvachon/broken-link-checker/issues/90) (reported in 2017, remains unfixed)
 # Mobile-Friendly Test by Google
 
 [Test made by Google](https://search.google.com/test/mobile-friendly). Especially important as hopefully what is reported here is similar to factors considered by Google for [ranking mobile-friendly websites higher](https://webmasters.googleblog.com/2016/03/continuing-to-make-web-more-mobile.html).

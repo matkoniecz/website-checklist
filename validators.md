@@ -3,7 +3,7 @@ Useful HTML validators
 What counts here: how many useful errors are reported, how many false positives are reported, how much time is needed to use this tools.
 
 # Detecting dead links
-I wnat to find all broken links on my website. I also would want to check and detect orphaned pages (pages not reachable from my main page by following links).
+I want to find all broken links on my website. I also would want to check and detect orphaned pages (pages not reachable from my main page by following links).
 
 Note that unlinked orphaned pages will not be checked by this tools, unless noted explicitly.
 
@@ -60,7 +60,7 @@ One of solutions is below. Not entirely happy about it but it works:
 
 [Test made by Google](https://search.google.com/test/mobile-friendly). Especially important as hopefully what is reported here is similar to factors considered by Google for [ranking mobile-friendly websites higher](https://webmasters.googleblog.com/2016/03/continuing-to-make-web-more-mobile.html).
 
-Following suggestions (like using viewport) from it may save time on what would be otherwise wasted on unneded debugging.
+Following suggestions (like using viewport) from it may save time on what would be otherwise wasted on unneeded debugging.
 
 # Grammarly
 

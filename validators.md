@@ -39,6 +39,9 @@ One of solutions is below. Not entirely happy about it but it works:
         * `htmlproofer /home/mateusz/Desktop/kolejka/portfolio/test_cases_for_detecting_link_rot/ --assume-extension --check-html --check-favicon --log-level warn`
 * this [site-graph tool](https://github.com/tomlinsonk/site-graph) is promising as a base, I am contributing to it
     * remember to use `--visit-external` - it is disabled by default!
+## Not tested yet
+* [link-checker](https://github.com/timaschew/link-checker)
+
 ### Problematic
 * [linkchecker](https://github.com/linkchecker/linkchecker) works very nicely
     * `linkchecker https://matkoniecz.github.io/dead_links_testing_site/`

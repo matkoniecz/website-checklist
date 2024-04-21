@@ -10,9 +10,9 @@ Note that unlinked orphaned pages will not be checked by this tools, unless note
 I want a script that
 
 * runs locally
-* can validate locally present files - not only online websites (I want to check dead links before publishing)
+* can validate locally present files - not only online websites (I want to check for dead links before publishing)
 * but also can validate published websites
-* works without hangups/crashes/not supporting UTF8
+* works without hangups/crashes/mishandling UTF8
 * can be used to detect orphaned pages
 * detects dead link in `<a href=`, `<img src=`, linked css/html files and more
 * can be used as is or is easily modifiable by me
@@ -25,11 +25,24 @@ Note that local html files can be served on localhost in a relatively simple way
 
 One of solutions is below. Not entirely happy about it but it works:
 
-`sudo npm install http-server -g` BTW, is there way to install node modules without sudo and have it within PATH?
+### http-server
+
+#### Install
+
+`sudo npm install http-server -g` 
+
+BTW, is there way to install node modules without sudo and have it within `PATH`? If yes, please open an issue in this project or in other way.
+
+#### Use
 
 `http-server` in directory with html files
 
-`p site_graph.py http://127.0.0.1:8080/ --visit-external --force`
+then use for example [site-graph tool](https://github.com/tomlinsonk/site-graph)
+
+```
+cd site-graph
+p site_graph.py http://127.0.0.1:8080/ --visit-external --force
+```
 
 ## Found candidates
 
@@ -37,27 +50,28 @@ One of solutions is below. Not entirely happy about it but it works:
     * Link check fails when `example` is linked instead of `example.html` while it works at Github Pages. Requires an extra parameter to stop requiring explicit `.html`
         * `htmlproofer /home/path_to_entire_folder/ --assume-extension --check-html --check-favicon --log-level warn`
         * `htmlproofer /home/mateusz/Desktop/kolejka/portfolio/test_cases_for_detecting_link_rot/ --assume-extension --check-html --check-favicon --log-level warn`
+        * `htmlproofer ../test_cases_for_detecting_link_rot/ --assume-extension --check-html --check-favicon --log-level warn`
 * this [site-graph tool](https://github.com/tomlinsonk/site-graph) is promising as a base, I am contributing to it
     * remember to use `--visit-external` - it is disabled by default!
 ## Not tested yet
 * [link-checker](https://github.com/timaschew/link-checker)
-
-### Problematic
 * [linkchecker](https://github.com/linkchecker/linkchecker) works very nicely
     * `linkchecker https://matkoniecz.github.io/dead_links_testing_site/`
     * outputting site graph is one of listed features! So detecting orphaned pages should be feasible...
     * `linkchecker https://matkoniecz.github.io/dead_links_testing_site/ --verbose -o csv` seems parsable to detect orphaned pages
-    * but [has problems with utf-8 support](https://github.com/linkchecker/linkchecker/issues/554)
+    * but [has problems with utf-8 support](https://github.com/linkchecker/linkchecker/issues/554) - but this should be fixed now!
+
+### Problematic
+
 * [another option](https://superuser.com/a/139468/376651) is wget and parsing its log. Mentioning for completeness but it looks like a nasty quagmire for me.
     * `wget --spider  -o wget.log  -e robots=off --wait 1 -r -p https://matkoniecz.github.io/dead_links_testing_site/`
     * `cat wget.log | grep 404`
-* [https://github.com/LukasHechenberger/broken-link-checker-local](https://github.com/LukasHechenberger/broken-link-checker-local)
+* [https://github.com/LukasHechenberger/broken-link-checker-local](https://github.com/LukasHechenberger/broken-link-checker-local) - but it is a dead buggy project, last commit in 2021, it is known to [hang randomly](https://github.com/stevenvachon/broken-link-checker/issues/90) (reported in 2017, remains unfixed as of 2024)
     * `blcl -ro . --filter-level 3`
     * `blcl -ro . --filter-level 3 | grep 'BROKEN'`
-    * UTF-8 [support has some issues](https://github.com/LukasHechenberger/broken-link-checker-local/issues/50) - see an upstream [issue](https://github.com/stevenvachon/broken-link-checker/issues/234)
-    * also, it is known to [hang randomly](https://github.com/stevenvachon/broken-link-checker/issues/90) (reported in 2017, remains unfixed)
-* [w3c link checker](https://github.com/w3c/link-checker#w3c-linkchecker) is promising
-    * but installation instructions [are broken](https://github.com/w3c/link-checker/issues/54)
+    * UTF-8 [support has some issues](https://github.com/LukasHechenberger/broken-link-checker-local/issues/50) - see an upstream [issue](https://github.com/stevenvachon/broken-link-checker/issues/234) - reported in 2021, as of 2024 still has "needs confirmation" label and remains unfixed
+* [w3c link checker](https://github.com/w3c/link-checker#w3c-linkchecker) may look promising
+    * but its installation instructions [are broken](https://github.com/w3c/link-checker/issues/54)
 
 # Mobile-Friendly Test by Google
 
